@@ -8,19 +8,15 @@ st.write("# Predição de câncer de mama.")
 st.write("## Exemplo com raio, perímetro, área, concavidade, junta côncava")
 
 st.sidebar.write("## Parâmetros")
-raio = st.sidebar.slider("raio", 2.0, 4.8, 3.0, 0.1)
-perimetro = st.sidebar.slider("perímetro", 1.0, 4.3, 2.8, 0.1)
-area = st.sidebar.slider("área", 1.0, 6.0, 3.5, 0.1)
-concavidade = st.sidebar.slider("Concavidade", 1.0, 5.0, 3.1, 0.1)
-junta_concava = st.sidebar.slider("Junta côncava", 1.0, 2.5, 2.0, 0.1)
+perimetro = st.sidebar.slider("perímetro", 1.0, 4.2, 3.5, 0.1)
+area = st.sidebar.slider("área", 1.0, 6.0, 2.5, 0.1)
+junta_concava = st.sidebar.slider("Junta côncava", 1.7, 2.6, 2.2, 0.1)
 
 with open("objetos.pkl", "rb") as arquivo:
   ss, dtc = pickle.load(arquivo)
 
-estrutura = { 'raio': raio,
-              'perímetro': perimetro,
+estrutura = { 'perímetro': perimetro,
               'area': area,
-              'concavidade': concavidade,
               'junta côncava': junta_concava }
 
 df= pd.DataFrame(estrutura, index=[0])
