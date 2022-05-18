@@ -8,10 +8,10 @@ st.write("# Predição de câncer de mama.")
 st.write("## Exemplo com raio, perímetro, área, concavidade, junta côncava")
 
 st.sidebar.write("## Parâmetros")
-raio = st.sidebar.slider("raio", 8.0, 2.0, 4.8, 0.1)
-perimetro = st.sidebar.slider("perímetro", 3.8, 1.0, 4.3, 0.1)
-area = st.sidebar.slider("área", 1.5, 1.0, 6.0, 0.1)
-concavidade = st.sidebar.slider("Concavidade", 8.1, 1.0, 5.0, 0.1)
+raio = st.sidebar.slider("raio", 3.0, 2.0, 4.8, 0.1)
+perimetro = st.sidebar.slider("perímetro", 2.8, 1.0, 4.3, 0.1)
+area = st.sidebar.slider("área", 3.5, 1.0, 6.0, 0.1)
+concavidade = st.sidebar.slider("Concavidade", 3.1, 1.0, 5.0, 0.1)
 junta_concava = st.sidebar.slider("Junta côncava", 2.0, 1.0, 2.5, 0.1)
 
 with open("objetos.pkl", "rb") as arquivo:
