@@ -36,7 +36,7 @@ predicao = pd.DataFrame(predicao)
 predicao.rename({
     0: 'B',
     1: 'M'
-},  inplace=True)
+}, axis=1, inplace=True)
 
 st.write("Probabilidades")
 st.write(predicao)
