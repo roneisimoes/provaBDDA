@@ -32,8 +32,8 @@ st.write(predicao)
 predicao = dtc.predict_proba(df)
 predicao = pd.DataFrame(predicao)
 predicao.rename({
-    'B': 0,
-    'M': 1
+    0:'B',
+    1:'M'
 }, axis=1, inplace=True)
 
 st.write("Probabilidades")
