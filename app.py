@@ -26,7 +26,7 @@ df = ss.transform(df)
 st.write(df)
 
 predicao = dtc.predict(df)
-st.write(f"O diagnóstico dessa pessoa é: **{predicao[1]}**")
+st.write(f"O diagnóstico dessa pessoa é: **{predicao[0]}**")
 #st.write(predicao)
 
 predicao = dtc.predict_proba(df)
