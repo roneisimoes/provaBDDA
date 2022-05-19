@@ -8,8 +8,8 @@ st.write("# Predição de câncer de mama.")
 st.write("## Exemplo com perímetro, área")
 
 st.sidebar.write("## Parâmetros")
-perimetro = st.sidebar.slider("perímetro", 1.7, 4.2, 3.3, 0.1)
-area = st.sidebar.slider("área", 1.0, 6.0, 3.3, 0.1)
+perimetro = st.sidebar.slider("perímetro", -1.7, 4.2, 3.3, 0.1)
+area = st.sidebar.slider("área", -1.0, 6.0, 3.3, 0.1)
 
 with open("objetos.pkl", "rb") as arquivo:
   ss, dtc = pickle.load(arquivo)
