@@ -9,7 +9,7 @@ st.write("## Exemplo com perímetro, área")
 
 st.sidebar.write("## Parâmetros")
 perimetro = st.sidebar.slider("perimetro", -2.0, 4.0, -1.3, 0.1)
-area = st.sidebar.slider("area", -1.5, 5.0, -2.5, 0.1)
+area = st.sidebar.slider("area", -1.5, 4.5, 2.0, 0.1)
 
 with open("objetos.pkl", "rb") as arquivo:
   ss, dtc = pickle.load(arquivo)
