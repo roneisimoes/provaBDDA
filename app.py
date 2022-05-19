@@ -1,4 +1,3 @@
-%%writefile app.py
 import streamlit as st
 import pickle
 from sklearn.preprocessing import StandardScaler
