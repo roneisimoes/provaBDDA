@@ -1,3 +1,4 @@
+%%writefile app.py
 import streamlit as st
 import pickle
 from sklearn.preprocessing import StandardScaler
@@ -5,17 +6,17 @@ from sklearn.tree import DecisionTreeClassifier
 import pandas as pd
 
 st.write("# Predição de câncer de mama.")
-st.write("## Exemplo com perímetro, área")
+st.write("## Exemplo com Área, Concavidade")
 
 st.sidebar.write("## Parâmetros")
-perimetro = st.sidebar.slider("perimetro", -1.4, 5.2, 2.3, 0.1)
-area = st.sidebar.slider("area", -1.5, 4.2, 2.5, 0.1)
+area = st.sidebar.slider("Area", -1.4, 5.2, 2.3, 0.1)
+concavidade = st.sidebar.slider("Concavidade", -1.5, 4.2, 2.5, 0.1)
 
 with open("objetos.pkl", "rb") as arquivo:
   ss, dtc = pickle.load(arquivo)
 
-estrutura = { 'perimetro': perimetro,
-              'area': area }
+estrutura = { 'Area': area,
+              'Concavidade': concavidade }
 
 df= pd.DataFrame(estrutura, index=[0])
 
