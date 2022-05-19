@@ -31,10 +31,10 @@ st.write(f"O diagnóstico dessa pessoa é: **{predicao[0]}**")
 
 predicao = dtc.predict_proba(df)
 predicao = pd.DataFrame(predicao)
-#predicao.rename({
-#    0: 'B',
- #   1: 'M'
-#}, axis=1, inplace=True)
+predicao.rename({
+    'B': 0,
+    'M': 1
+}, axis=1, inplace=True)
 
 st.write("Probabilidades")
 st.write(predicao)
